@@ -903,12 +903,13 @@
         }
 
         .net-result p {
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             color: var(--white);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
+            font-weight: 600;
+            text-transform: none;
+            letter-spacing: 0;
+            margin-bottom: 0;
+            line-height: 1.5;
         }
 
         .net-value {
@@ -1321,246 +1322,54 @@
            ========================================================================== */
         footer {
             background-color: var(--primary);
-            color: rgba(255, 255, 255, 0.7);
-            padding: 5rem 0 2.5rem 0;
+            color: rgba(255, 255, 255, 0.85);
+            padding: 1.5rem 0 1.25rem;
             border-top: 1px solid var(--border-color-dark);
             font-size: 0.95rem;
         }
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
-            gap: 3rem;
-            margin-bottom: 4rem;
-        }
-
-        .footer-logo-col p {
-            margin-top: 1.25rem;
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.55);
-        }
-
-        .footer-col h4 {
-            color: var(--white);
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .footer-links {
-            list-style: none;
+        .footer-compact {
             display: flex;
             flex-direction: column;
-            gap: 0.8rem;
+            align-items: center;
+            text-align: center;
+            gap: 0.75rem;
         }
 
-        .footer-links a:hover {
+        .footer-compact .logo img {
+            height: 32px;
+        }
+
+        .footer-coming-soon {
+            color: var(--white);
+            font-size: clamp(1.35rem, 3.5vw, 2rem);
+            font-weight: 700;
+            line-height: 1.4;
+            max-width: 820px;
+            margin: 0;
+        }
+
+        .footer-contact-line {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .footer-contact-line a {
+            color: var(--white);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .footer-contact-line a:hover {
             color: var(--accent-blue);
-            transform: translateX(3px);
         }
 
-        .footer-contact p {
-            margin-bottom: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .footer-contact svg {
-            width: 18px;
-            height: 18px;
-            fill: var(--accent-blue);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding-top: 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.85rem;
+        .footer-copyright {
+            margin: 0.25rem 0 0;
+            font-size: 0.75rem;
             color: rgba(255, 255, 255, 0.45);
-        }
-
-
-        /* ==========================================================================
-           10. RESPONSIVE DESIGN (MEDIA QUERIES)
-           ========================================================================== */
-        @media (max-width: 1024px) {
-            html {
-                font-size: 15px;
-            }
-
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-                text-align: center;
-            }
-
-            .hero-subtitle {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .hero-actions {
-                justify-content: center;
-            }
-
-            .simulator-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 2.5rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            section {
-                padding: 4.5rem 0;
-            }
-
-            .section-header {
-                margin-bottom: 3rem;
-            }
-
-            .section-header h2 {
-                font-size: 2rem;
-            }
-
-            /* Responsive Navigation Header */
-            .nav-toggle {
-                display: block;
-                z-index: 1001;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 75%;
-                max-width: 320px;
-                height: 100vh;
-                background-color: var(--white);
-                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 7rem 2.5rem 2.5rem 2.5rem;
-                transition: var(--transition-smooth);
-                z-index: 1000;
-            }
-
-            .nav-links.active {
-                right: 0;
-            }
-
-            .nav-toggle.active span:nth-child(1) {
-                transform: translateY(7px) rotate(45deg);
-            }
-
-            .nav-toggle.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .nav-toggle.active span:nth-child(3) {
-                transform: translateY(-7px) rotate(-45deg);
-            }
-
-            /* Carousel Layout adjustments */
-            .carousel-track-container {
-                aspect-ratio: 4 / 3;
-            }
-
-            .carousel-caption {
-                padding: 1.5rem;
-            }
-
-            .carousel-caption h3 {
-                font-size: 1.25rem;
-            }
-
-            .carousel-caption p {
-                font-size: 0.9rem;
-            }
-
-            /* Forms Mobile Styles */
-            .form-grid {
-                grid-template-columns: 1fr;
-                gap: 1.25rem;
-            }
-
-            .form-group-full {
-                grid-column: span 1;
-            }
-
-            .form-container {
-                padding: 2.5rem 1.5rem;
-            }
-
-            .form-header h2 {
-                font-size: 1.75rem;
-            }
-
-            /* Simulator layouts mobile */
-            .scenarios-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .scenario-badge {
-                top: -12px;
-                right: 50%;
-                transform: translateX(50%);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .hero-actions {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .hero-actions .btn {
-                width: 100%;
-            }
-
-            .carousel-btn {
-                width: 40px;
-                height: 40px;
-            }
-
-            .carousel-btn-left {
-                left: 0.5rem;
-            }
-
-            .carousel-btn-right {
-                right: 0.5rem;
-            }
-
-            .simulator-inputs-panel {
-                padding: 2rem 1.25rem;
-            }
-
-            .results-summary-card .gross-value {
-                font-size: 2.2rem;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
         }
 
         /* ==========================================================================
@@ -1716,14 +1525,327 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        @media (max-width: 768px) {
-            .vision-grid {
+        /* ==========================================================================
+           12. RESPONSIVE DESIGN (ALL SECTIONS)
+           ========================================================================== */
+        @media (max-width: 1024px) {
+            html {
+                font-size: 15px;
+            }
+
+            .hero-grid,
+            .vision-grid,
+            .simulator-grid {
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
+
+            .hero-grid {
+                text-align: center;
+            }
+
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .carousel-container {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.25rem;
+            }
+
+            section,
+            .vision-section {
+                padding: 4.5rem 0;
+            }
+
+            .hero {
+                padding-top: 8rem;
+                padding-bottom: 5rem;
+            }
+
+            .section-header {
+                margin-bottom: 3rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .section-header p {
+                font-size: 1rem;
+            }
+
+            .hero-title {
+                font-size: 2.75rem;
+            }
+
+            .nav-toggle {
+                display: block;
+                z-index: 1001;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: min(85vw, 320px);
+                max-width: 320px;
+                height: 100vh;
+                height: 100dvh;
+                background-color: var(--white);
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 7rem 2rem 2rem;
+                transition: var(--transition-smooth);
+                z-index: 1000;
+                overflow-y: auto;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .nav-toggle.active span:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+
+            .nav-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .nav-toggle.active span:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+
             .vision-tabs {
                 flex-direction: column;
                 gap: 0.5rem;
+            }
+
+            .vision-quote-card {
+                padding: 2.5rem 1.75rem;
+            }
+
+            .vision-quote-card::before {
+                font-size: 5rem;
+                top: -10px;
+            }
+
+            .vision-tab-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .carousel-track-container {
+                aspect-ratio: 4 / 3;
+            }
+
+            .carousel-caption {
+                padding: 1.5rem;
+            }
+
+            .carousel-caption h3 {
+                font-size: 1.25rem;
+            }
+
+            .carousel-caption p {
+                font-size: 0.9rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .simulator-inputs-panel,
+            .scenario-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+
+            .form-group-full {
+                grid-column: span 1;
+            }
+
+            .form-container {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .form-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .video-modal-content {
+                width: 95%;
+            }
+
+            .video-close-btn {
+                top: -42px;
+                right: 0;
+            }
+
+            .success-card {
+                width: calc(100% - 2rem);
+                margin: 0 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            html {
+                font-size: 14px;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            section,
+            .vision-section {
+                padding: 3.5rem 0;
+            }
+
+            .hero {
+                padding-top: 7rem;
+                padding-bottom: 4rem;
+            }
+
+            .hero-title {
+                font-size: 2.1rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.05rem;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-actions .btn {
+                width: 100%;
+            }
+
+            .badge {
+                font-size: 0.75rem;
+                padding: 0.35rem 0.85rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .vision-quote-text {
+                font-size: 1.1rem;
+            }
+
+            .vision-tab-btn {
+                font-size: 0.9rem;
+                padding: 0.85rem;
+            }
+
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+            }
+
+            .carousel-btn-left {
+                left: 0.5rem;
+            }
+
+            .carousel-btn-right {
+                right: 0.5rem;
+            }
+
+            .carousel-nav-dots {
+                margin-top: 1.5rem;
+            }
+
+            .input-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .input-value-display {
+                font-size: 1.1rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            .simulator-inputs-panel h3 {
+                font-size: 1.45rem;
+            }
+
+            .results-summary-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .results-summary-card .gross-value {
+                font-size: 1.85rem;
+                white-space: normal;
+                word-break: break-word;
+            }
+
+            .breakdown-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+                font-size: 0.8rem;
+            }
+
+            .scenario-card h4 {
+                font-size: 1.05rem;
+            }
+
+            .net-result p {
+                font-size: 0.9rem;
+            }
+
+            .simulator-cta-wrapper .btn-lg {
+                width: 100%;
+            }
+
+            footer {
+                padding: 1.25rem 0 1rem;
+            }
+
+            .footer-coming-soon {
+                font-size: 1.2rem;
+            }
+
+            .footer-contact-line {
+                font-size: 0.85rem;
+                line-height: 1.5;
+            }
+
+            .video-duration {
+                font-size: 0.75rem;
+                padding: 0 1rem;
+                text-align: center;
             }
         }
     </style>
@@ -2098,7 +2220,7 @@
                 <div class="section-header">
                     <span class="badge badge-dark">Outil d'estimation</span>
                     <h2 style="color: var(--white);">Estimez vos gains avec AfricaFirst</h2>
-                    <p style="color: rgba(255, 255, 255, 0.7);">Ajustez les curseurs ci-dessous pour projeter vos futurs revenus annuels avec notre modèle de partage 50/50.</p>
+                    <p style="color: rgba(255, 255, 255, 0.7);">Ajustez les curseurs ci-dessous pour projeter vos futurs revenus annuels</p>
                 </div>
 
                 <div class="simulator-grid">
@@ -2133,12 +2255,11 @@
                             <div class="gross-value" id="gross-revenue-val">10 000 000 FCFA</div>
                         </div>
 
-                        <!-- Votre Part Formateur (50%) -->
+                        <!-- Prestations incluses -->
                         <div class="scenarios-container">
                             <div class="scenario-card recommended">
-                                <span class="scenario-badge">Votre Part (50%)</span>
                                 <div>
-                                    <h4>Rémunération Formateur<br><small style="font-weight:400; opacity:0.8;">(Toutes prestations incluses)</small></h4>
+                                    <h4>Toutes les prestations suivantes sont incluses</h4>
                                     <div class="scenario-breakdown">
                                         <div class="breakdown-row">
                                             <span>Frais de plateforme :</span>
@@ -2163,8 +2284,7 @@
                                     </div>
                                 </div>
                                 <div class="net-result">
-                                    <p>Votre Revenu Net Final</p>
-                                    <div class="net-value" id="scenario-a-net">5 000 000 FCFA</div>
+                                    <p>Revenu Brut Global avant reversement de la quote part d'Africafirst</p>
                                 </div>
                             </div>
                         </div>
@@ -2191,11 +2311,18 @@
 
                     <form id="recruitment-form" novalidate>
                         <div class="form-grid">
-                            <!-- Nom & Prénom -->
+                            <!-- Nom -->
                             <div class="form-group">
-                                <label for="fullname">Nom & Prénom *</label>
-                                <input type="text" id="fullname" class="form-input" placeholder="Ex: Dr. Koffi Amadou" required>
-                                <span class="error-message" id="fullname-error">Le nom complet est obligatoire.</span>
+                                <label for="lastname">Nom *</label>
+                                <input type="text" id="lastname" class="form-input" placeholder="Ex: Koffi" required>
+                                <span class="error-message" id="lastname-error">Le nom est obligatoire.</span>
+                            </div>
+
+                            <!-- Prénom -->
+                            <div class="form-group">
+                                <label for="firstname">Prénom *</label>
+                                <input type="text" id="firstname" class="form-input" placeholder="Ex: Amadou" required>
+                                <span class="error-message" id="firstname-error">Le prénom est obligatoire.</span>
                             </div>
 
                             <!-- Email Pro -->
@@ -2203,6 +2330,114 @@
                                 <label for="email">Adresse Email Professionnelle *</label>
                                 <input type="email" id="email" class="form-input" placeholder="Ex: k.amadou@monentreprise.com" required>
                                 <span class="error-message" id="email-error">Veuillez entrer une adresse e-mail professionnelle valide.</span>
+                            </div>
+
+                            <!-- Pays -->
+                            <div class="form-group">
+                                <label for="country">Pays *</label>
+                                <select id="country" class="form-input form-select" required>
+                                    <option value="" disabled selected>Sélectionnez votre pays</option>
+                                    <optgroup label="Pays africains">
+                                        <option value="afrique-du-sud">Afrique du Sud</option>
+                                        <option value="algerie">Algérie</option>
+                                        <option value="angola">Angola</option>
+                                        <option value="benin">Bénin</option>
+                                        <option value="botswana">Botswana</option>
+                                        <option value="burkina-faso">Burkina Faso</option>
+                                        <option value="burundi">Burundi</option>
+                                        <option value="cabo-verde">Cabo Verde</option>
+                                        <option value="cameroun">Cameroun</option>
+                                        <option value="comores">Comores</option>
+                                        <option value="congo-brazzaville">Congo (Brazzaville)</option>
+                                        <option value="congo-rdc">Congo (RDC)</option>
+                                        <option value="cote-d-ivoire">Côte d'Ivoire</option>
+                                        <option value="djibouti">Djibouti</option>
+                                        <option value="egypte">Égypte</option>
+                                        <option value="erythree">Érythrée</option>
+                                        <option value="eswatini">Eswatini</option>
+                                        <option value="ethiopie">Éthiopie</option>
+                                        <option value="gabon">Gabon</option>
+                                        <option value="gambie">Gambie</option>
+                                        <option value="ghana">Ghana</option>
+                                        <option value="guinee">Guinée</option>
+                                        <option value="guinee-bissau">Guinée-Bissau</option>
+                                        <option value="guinee-equatoriale">Guinée équatoriale</option>
+                                        <option value="kenya">Kenya</option>
+                                        <option value="lesotho">Lesotho</option>
+                                        <option value="liberia">Libéria</option>
+                                        <option value="libye">Libye</option>
+                                        <option value="madagascar">Madagascar</option>
+                                        <option value="malawi">Malawi</option>
+                                        <option value="mali">Mali</option>
+                                        <option value="maroc">Maroc</option>
+                                        <option value="maurice">Maurice</option>
+                                        <option value="mauritanie">Mauritanie</option>
+                                        <option value="mozambique">Mozambique</option>
+                                        <option value="namibie">Namibie</option>
+                                        <option value="niger">Niger</option>
+                                        <option value="nigeria">Nigeria</option>
+                                        <option value="ouganda">Ouganda</option>
+                                        <option value="rwanda">Rwanda</option>
+                                        <option value="sao-tome-et-principe">São Tomé-et-Príncipe</option>
+                                        <option value="senegal">Sénégal</option>
+                                        <option value="seychelles">Seychelles</option>
+                                        <option value="sierra-leone">Sierra Leone</option>
+                                        <option value="somalie">Somalie</option>
+                                        <option value="soudan">Soudan</option>
+                                        <option value="soudan-du-sud">Soudan du Sud</option>
+                                        <option value="tanzanie">Tanzanie</option>
+                                        <option value="tchad">Tchad</option>
+                                        <option value="togo">Togo</option>
+                                        <option value="tunisie">Tunisie</option>
+                                        <option value="zambie">Zambie</option>
+                                        <option value="zimbabwe">Zimbabwe</option>
+                                        <option value="republique-centrafricaine">République centrafricaine</option>
+                                    </optgroup>
+                                    <optgroup label="Pays francophones (hors Afrique)">
+                                        <option value="andorre">Andorre</option>
+                                        <option value="belgique">Belgique</option>
+                                        <option value="cambodge">Cambodge</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="france">France</option>
+                                        <option value="haiti">Haïti</option>
+                                        <option value="laos">Laos</option>
+                                        <option value="liban">Liban</option>
+                                        <option value="luxembourg">Luxembourg</option>
+                                        <option value="monaco">Monaco</option>
+                                        <option value="suisse">Suisse</option>
+                                        <option value="vanuatu">Vanuatu</option>
+                                        <option value="vietnam">Viêt Nam</option>
+                                    </optgroup>
+                                    <optgroup label="Autres pays principaux">
+                                        <option value="allemagne">Allemagne</option>
+                                        <option value="arabie-saoudite">Arabie saoudite</option>
+                                        <option value="argentine">Argentine</option>
+                                        <option value="australie">Australie</option>
+                                        <option value="autriche">Autriche</option>
+                                        <option value="bresil">Brésil</option>
+                                        <option value="chine">Chine</option>
+                                        <option value="coree-du-sud">Corée du Sud</option>
+                                        <option value="emirats-arabes-unis">Émirats arabes unis</option>
+                                        <option value="espagne">Espagne</option>
+                                        <option value="etats-unis">États-Unis</option>
+                                        <option value="inde">Inde</option>
+                                        <option value="indonesie">Indonésie</option>
+                                        <option value="irlande">Irlande</option>
+                                        <option value="israel">Israël</option>
+                                        <option value="italie">Italie</option>
+                                        <option value="japon">Japon</option>
+                                        <option value="mexique">Mexique</option>
+                                        <option value="norvege">Norvège</option>
+                                        <option value="pays-bas">Pays-Bas</option>
+                                        <option value="pologne">Pologne</option>
+                                        <option value="portugal">Portugal</option>
+                                        <option value="royaume-uni">Royaume-Uni</option>
+                                        <option value="russie">Russie</option>
+                                        <option value="suede">Suède</option>
+                                        <option value="turquie">Turquie</option>
+                                    </optgroup>
+                                </select>
+                                <span class="error-message" id="country-error">Veuillez sélectionner votre pays.</span>
                             </div>
 
                             <!-- Téléphone + Indicatif -->
@@ -2250,50 +2485,18 @@
        FOOTER
        ========================================================================== -->
     <footer>
-        <div class="container footer-grid">
-            <div class="footer-col footer-logo-col">
-                <a href="#" class="logo">
-                    <img src="assets/logo.png" alt="AfricaFirst Online">
-                </a>
-                <p>Digitaliser, sécuriser et monétiser les compétences clés en Afrique francophone pour libérer le potentiel de la jeunesse.</p>
-            </div>
-            
-            <div class="footer-col">
-                <h4>Navigation</h4>
-                <ul class="footer-links">
-                    <li><a href="#avantages">Avantages</a></li>
-                    <li><a href="#diaporama">Captures d'Écran</a></li>
-                    <li><a href="#simulateur">Simulateur de Gains</a></li>
-                    <li><a href="#partenariat">Devenir Partenaire</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Mentions Légales</h4>
-                <ul class="footer-links">
-                    <li><a href="#">Conditions d'Utilisation</a></li>
-                    <li><a href="#">Politique de Confidentialité</a></li>
-                    <li><a href="#">Protection des Données</a></li>
-                    <li><a href="#">Charte Déontologique</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col footer-contact">
-                <h4>Contact Professionnel</h4>
-                <p>
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20,4H4C2.9,4 2,4.9 2,6V18C2,19.1 2.9,20 4,20H20C21.1,20 22,19.1 22,18V6C22,4.9 21.1,4 20,4M20,8L12,13L4,8V6L12,11L20,6V8Z"/></svg>
-                    partenaires@africafirst.com
-                </p>
-                <p>
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M11,17H13V11H11V17M11,9H13V7H11V9Z"/></svg>
-                    Support technique formateurs 7j/7
-                </p>
-            </div>
-        </div>
-        
-        <div class="container footer-bottom">
-            <p>&copy; 2026 AfricaFirst E-Learning Platform. Tous droits réservés.</p>
-            <p>Conçu pour bâtir la souveraineté intellectuelle africaine.</p>
+        <div class="container footer-compact">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="AfricaFirst Online">
+            </a>
+            <p class="footer-coming-soon">Notre plateforme sera bientôt disponible, soyez parmi les premiers à l'inaugurer...</p>
+            <p class="footer-contact-line">
+                contact pro:
+                <a href="mailto:contact@productivai.fr">contact@productivai.fr</a>
+                //
+                <a href="mailto:contact@africafirst.online">contact@africafirst.online</a>
+            </p>
+            <p class="footer-copyright">&copy; 2026 AfricaFirst E-Learning Platform. Tous droits réservés.</p>
         </div>
     </footer>
 
@@ -2489,7 +2692,6 @@
             const priceVal = document.getElementById('price-val');
             
             const grossValDisplay = document.getElementById('gross-revenue-val');
-            const scenarioANetDisplay = document.getElementById('scenario-a-net');
 
             // Format number helper (French grouping: 1 000 000)
             const formatNumber = (value) => {
@@ -2515,13 +2717,9 @@
                 volumeVal.textContent = formatNumber(X);
                 priceVal.textContent = `${formatNumber(P)} FCFA`;
 
-                // 1. Gross Revenue
+                // Gross Revenue
                 const grossRevenue = X * P;
                 grossValDisplay.textContent = formatCurrency(grossRevenue);
-
-                // 2. Formateur net = 50% du brut
-                const netFormateur = grossRevenue * 0.50;
-                scenarioANetDisplay.textContent = formatCurrency(netFormateur);
             };
 
             // Event Listeners for sliders input (realtime feedback)
@@ -2602,8 +2800,10 @@
             const successCloseBtn = document.getElementById('success-close-btn');
 
             // Fields selectors
-            const fullnameInput = document.getElementById('fullname');
+            const lastnameInput = document.getElementById('lastname');
+            const firstnameInput = document.getElementById('firstname');
             const emailInput = document.getElementById('email');
+            const countryInput = document.getElementById('country');
             const phoneInput = document.getElementById('phone');
             const expertiseInput = document.getElementById('expertise');
             const portfolioInput = document.getElementById('portfolio');
@@ -2639,6 +2839,12 @@
                 }
             });
 
+            countryInput.addEventListener('change', () => {
+                if (countryInput.value !== "") {
+                    clearFieldError(countryInput);
+                }
+            });
+
             // Validators
             const isEmailValid = (email) => {
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -2661,8 +2867,11 @@
                 }
             };
 
+            const isNameValid = (name) => name.trim().length >= 2;
+
             // Setup listeners for input modifications
-            setupRealTimeValidation(fullnameInput, (val) => val.trim().length >= 3, "Le nom complet doit comporter au moins 3 caractères.");
+            setupRealTimeValidation(lastnameInput, isNameValid, "Le nom doit comporter au moins 2 caractères.");
+            setupRealTimeValidation(firstnameInput, isNameValid, "Le prénom doit comporter au moins 2 caractères.");
             setupRealTimeValidation(emailInput, isEmailValid, "Veuillez entrer une adresse e-mail professionnelle valide (ex: contact@entreprise.com).");
             setupRealTimeValidation(phoneInput, isPhoneValid, "Veuillez entrer un numéro de téléphone valide (indicatif pays conseillé).");
             setupRealTimeValidation(portfolioInput, isUrlValid, "Veuillez saisir un lien URL valide (ex: https://...).");
@@ -2673,12 +2882,20 @@
                 
                 let isFormValid = true;
 
-                // Validate Full Name
-                if (fullnameInput.value.trim().length < 3) {
-                    setFieldError(fullnameInput, "Le nom complet est obligatoire (min. 3 lettres).");
+                // Validate Last Name
+                if (!isNameValid(lastnameInput.value)) {
+                    setFieldError(lastnameInput, "Le nom est obligatoire (min. 2 lettres).");
                     isFormValid = false;
                 } else {
-                    clearFieldError(fullnameInput);
+                    clearFieldError(lastnameInput);
+                }
+
+                // Validate First Name
+                if (!isNameValid(firstnameInput.value)) {
+                    setFieldError(firstnameInput, "Le prénom est obligatoire (min. 2 lettres).");
+                    isFormValid = false;
+                } else {
+                    clearFieldError(firstnameInput);
                 }
 
                 // Validate Email
@@ -2687,6 +2904,14 @@
                     isFormValid = false;
                 } else {
                     clearFieldError(emailInput);
+                }
+
+                // Validate Country
+                if (countryInput.value === "") {
+                    setFieldError(countryInput, "Veuillez sélectionner votre pays.");
+                    isFormValid = false;
+                } else {
+                    clearFieldError(countryInput);
                 }
 
                 // Validate Phone
