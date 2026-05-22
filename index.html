@@ -179,7 +179,7 @@
 
         .badge-dark {
             background-color: rgba(255, 255, 255, 0.08);
-            color: var(--accent-blue);
+            color: var(--white);
             border-color: rgba(255, 255, 255, 0.15);
         }
 
@@ -364,6 +364,7 @@
             height: 100%;
             object-fit: cover;
             transition: var(--transition-smooth);
+            pointer-events: none;
         }
 
         .hero-video-overlay {
@@ -506,7 +507,7 @@
         }
 
         .carousel-caption h3 {
-            color: var(--accent-blue);
+            color: var(--white);
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
         }
@@ -748,7 +749,7 @@
         .input-value-display {
             font-weight: 800;
             font-size: 1.25rem;
-            color: var(--accent-blue);
+            color: var(--white);
             background-color: rgba(255, 255, 255, 0.08);
             padding: 0.25rem 1rem;
             border-radius: 8px;
@@ -903,7 +904,7 @@
 
         .net-result p {
             font-size: 0.85rem;
-            color: var(--accent-blue);
+            color: var(--white);
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
@@ -920,8 +921,8 @@
         }
 
         .recommended .net-value {
-            color: var(--accent-blue);
-            text-shadow: 0 2px 10px rgba(37, 153, 214, 0.15);
+            color: var(--white);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
         .simulator-cta-wrapper {
@@ -1196,6 +1197,14 @@
             width: 24px;
             height: 24px;
             fill: currentColor;
+        }
+
+        .presentation-video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+            background-color: #000;
         }
 
         /* Beautiful Simulated Video Animation inside modal (no actual heavy video) */
@@ -1771,14 +1780,14 @@
                 
                 <div class="hero-video-wrapper">
                     <div class="hero-video-container" id="play-video-trigger">
-                        <img src="assets/video_cover.png" alt="Vidéo de présentation AfricaFirst" class="hero-video-cover">
+                        <video class="hero-video-cover" src="assets/video5.mp4" poster="assets/video_cover.png" muted playsinline preload="metadata" aria-hidden="true"></video>
                         <div class="hero-video-overlay">
                             <div class="play-btn-circle">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8,5.14V19.14L19,12.14L8,5.14Z"/>
                                 </svg>
                             </div>
-                            <span class="video-duration">DÉCOUVRIR LE CONCEPT (02:45)</span>
+                            <span class="video-duration" id="hero-video-duration">DÉCOUVRIR LE CONCEPT</span>
                         </div>
                     </div>
                 </div>
@@ -2292,7 +2301,7 @@
     <!-- ==========================================================================
        MODAL DE LECTURE VIDÉO (SIMULATEUR DE LECTURE ANIMÉ)
        ========================================================================== -->
-    <div class="video-modal" id="video-modal" role="dialog" aria-modal="true">
+    <div class="video-modal" id="video-modal" role="dialog" aria-modal="true" aria-label="Vidéo de présentation AfricaFirst">
         <div class="video-modal-content">
             <button class="video-close-btn" id="close-video-btn" aria-label="Fermer la vidéo">
                 Fermer
@@ -2300,40 +2309,11 @@
                     <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/>
                 </svg>
             </button>
-            
-            <div class="simulated-player">
-                <div class="simulated-bg"></div>
-                <div class="player-content">
-                    <div class="player-logo">
-                        <img src="assets/logo.png" alt="AfricaFirst Online" style="height: 40px; width: auto; object-fit: contain;">
-                    </div>
-                    <h3 style="color: var(--white); font-size: 1.5rem; margin-bottom: 0.5rem;" id="player-title">Présentation d'AfricaFirst</h3>
-                    <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.95rem;">Visite guidée virtuelle du Dashboard et des outils du formateur d'excellence.</p>
-                    
-                    <div class="player-bar-animation">
-                        <div class="player-bar-progress" id="player-progress"></div>
-                    </div>
-                    <span id="player-time-display" style="font-size: 0.9rem; font-weight: bold; color: var(--accent-gold);">0:00 / 2:45</span>
-                </div>
-                
-                <div class="video-controls">
-                    <div class="controls-left">
-                        <button class="control-btn" id="sim-play-toggle" aria-label="Play/Pause">
-                            <svg viewBox="0 0 24 24" id="sim-play-icon">
-                                <path d="M8,5.14V19.14L19,12.14L8,5.14Z"/>
-                            </svg>
-                        </button>
-                        <span id="sim-time-indicator">00:00 / 02:45</span>
-                    </div>
-                    <div class="controls-right">
-                        <button class="control-btn" aria-label="Volume">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18.03,19.86 21,16.28 21,12C21,7.72 18.03,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.77 16.5,12M12,4L8.7,7H4V17H8.7L12,20V4Z"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
+
+            <video id="presentation-video" class="presentation-video" controls playsinline preload="metadata" poster="assets/video_cover.png">
+                <source src="assets/video5.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la lecture vidéo.
+            </video>
         </div>
     </div>
 
@@ -2553,86 +2533,65 @@
 
 
             // ==========================================================================
-            // E. HIGH FIDELITY SIMULATED VIDEO PLAYER (MODAL)
+            // E. VIDEO PLAYER (MODAL)
             // ==========================================================================
             const triggerVideo = document.getElementById('play-video-trigger');
             const videoModal = document.getElementById('video-modal');
             const closeVideoBtn = document.getElementById('close-video-btn');
-            
-            // Video animation states
-            const simPlayToggle = document.getElementById('sim-play-toggle');
-            const simPlayIcon = document.getElementById('sim-play-icon');
-            const playerProgress = document.getElementById('player-progress');
-            const playerTimeDisplay = document.getElementById('player-time-display');
-            const simTimeIndicator = document.getElementById('sim-time-indicator');
+            const presentationVideo = document.getElementById('presentation-video');
+            const heroVideoDuration = document.getElementById('hero-video-duration');
+            const heroPreviewVideo = document.querySelector('.hero-video-cover');
 
-            let isPlaying = false;
-            let currentVideoTime = 0;
-            const totalVideoTime = 165; // 2 minutes 45 seconds (165s)
-            let videoTimer = null;
+            const formatVideoDurationLabel = (seconds) => {
+                if (!Number.isFinite(seconds) || seconds <= 0) {
+                    return 'DÉCOUVRIR LE CONCEPT';
+                }
 
-            const formatVideoTime = (seconds) => {
-                const m = Math.floor(seconds / 60);
-                const s = Math.floor(seconds % 60);
-                return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+                const totalSeconds = Math.round(seconds);
+                const minutes = Math.floor(totalSeconds / 60);
+                const remainingSeconds = totalSeconds % 60;
+                return `DÉCOUVRIR LE CONCEPT (${minutes}:${remainingSeconds.toString().padStart(2, '0')})`;
             };
 
-            const toggleSimPlayState = () => {
-                isPlaying = !isPlaying;
-                if (isPlaying) {
-                    // Set pause icon
-                    simPlayIcon.innerHTML = `<path d="M6,19H10V5H6V19M14,5v14h4V5H14Z"/>`;
-                    
-                    videoTimer = setInterval(() => {
-                        currentVideoTime++;
-                        if (currentVideoTime >= totalVideoTime) {
-                            currentVideoTime = 0;
-                            toggleSimPlayState();
-                        }
-                        
-                        // Update Progress bar & labels
-                        const percent = (currentVideoTime / totalVideoTime) * 100;
-                        playerProgress.style.width = `${percent}%`;
-                        
-                        const timeStr = `${formatVideoTime(currentVideoTime)} / ${formatVideoTime(totalVideoTime)}`;
-                        playerTimeDisplay.textContent = timeStr;
-                        simTimeIndicator.textContent = timeStr;
-                    }, 1000);
-                } else {
-                    // Set play icon
-                    simPlayIcon.innerHTML = `<path d="M8,5.14V19.14L19,12.14L8,5.14Z"/>`;
-                    clearInterval(videoTimer);
+            const updateVideoDurationLabel = () => {
+                if (heroVideoDuration && presentationVideo.duration) {
+                    heroVideoDuration.textContent = formatVideoDurationLabel(presentationVideo.duration);
                 }
             };
 
-            triggerVideo.addEventListener('click', () => {
+            presentationVideo.addEventListener('loadedmetadata', updateVideoDurationLabel);
+            if (heroPreviewVideo) {
+                heroPreviewVideo.addEventListener('loadedmetadata', updateVideoDurationLabel);
+            }
+
+            const openVideo = () => {
                 videoModal.classList.add('active');
-                document.body.style.overflow = 'hidden'; // block scrolling behind
-                toggleSimPlayState(); // auto play simulated demo
-            });
+                document.body.style.overflow = 'hidden';
+                presentationVideo.currentTime = 0;
+                presentationVideo.play().catch(() => {});
+            };
 
             const closeVideo = () => {
                 videoModal.classList.remove('active');
-                document.body.style.overflow = ''; // restore scrolling
-                if (isPlaying) {
-                    toggleSimPlayState();
-                }
-                currentVideoTime = 0;
-                playerProgress.style.width = '0%';
-                playerTimeDisplay.textContent = `00:00 / 02:45`;
-                simTimeIndicator.textContent = `00:00 / 02:45`;
+                document.body.style.overflow = '';
+                presentationVideo.pause();
+                presentationVideo.currentTime = 0;
             };
 
+            triggerVideo.addEventListener('click', openVideo);
             closeVideoBtn.addEventListener('click', closeVideo);
-            
-            // Close modal when clicking outside content area
+
             videoModal.addEventListener('click', (e) => {
                 if (e.target === videoModal) {
                     closeVideo();
                 }
             });
 
-            simPlayToggle.addEventListener('click', toggleSimPlayState);
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+                    closeVideo();
+                }
+            });
 
 
             // ==========================================================================
