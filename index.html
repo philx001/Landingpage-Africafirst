@@ -1,0 +1,2817 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfricaFirst - Partagez votre expertise, bâtissez l'Afrique de demain</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Rejoignez AfricaFirst en tant que formateur d'excellence. Digitalisez, sécurisez et vendez vos formations en Afrique francophone avec le meilleur partage de revenus du marché.">
+    <meta name="keywords" content="formation en ligne Afrique, formateur en ligne, e-learning Afrique, business d'impact, revenus passifs, mobile money Orange MTN Wave">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Devenez Formateur d'Excellence - AfricaFirst">
+    <meta property="og:description" content="Transformez votre expertise en un business d'impact. Zéro frais caché, retraits par Mobile Money et virements.">
+    <meta property="og:image" content="assets/video_cover.png">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon (Fallback placeholder) -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================================================
+           1. DESIGN SYSTEM & BASE STYLES
+           ========================================================================== */
+        :root {
+            /* Colors - Inspired by africafirst.graph-life.fr (#0a22c2 and #2599d6) */
+            --primary: #0a22c2; /* Vivid Blue */
+            --primary-dark: #07178a; /* Deep Royal Blue */
+            --primary-light: #f0f4f9; /* Soft Light Blue Background */
+            --primary-rgb: 10, 34, 194;
+            --secondary-bg: #f8fafc; /* Off-white */
+            --accent-blue: #2599d6; /* Sky/Accent Blue */
+            --accent-blue-rgb: 37, 153, 214;
+            --accent-glow: rgba(37, 153, 214, 0.15);
+            --text-dark: #0f172a; /* Slate 900 */
+            --text-body: #334155; /* Slate 700 */
+            --text-muted: #64748b; /* Slate 500 */
+            --text-light: #f1f5f9;
+            --white: #ffffff;
+            
+            /* Layout & Shadows */
+            --border-color: rgba(10, 34, 194, 0.08);
+            --border-color-light: rgba(255, 255, 255, 0.1);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 10px 30px rgba(10, 34, 194, 0.06);
+            --shadow-lg: 0 20px 50px rgba(10, 34, 194, 0.12);
+            --shadow-accent: 0 10px 25px rgba(37, 153, 214, 0.2);
+            
+            /* Transitions */
+            --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: all 0.2s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--white);
+            color: var(--text-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Common Layout Elements */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-fast);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.875rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            gap: 0.5rem;
+            border: none;
+            outline: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent-blue) 100%);
+            color: var(--white);
+            box-shadow: var(--shadow-accent);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(10, 34, 194, 0.35);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--primary);
+            border-color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* Badges / Accents */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+            background-color: rgba(37, 153, 214, 0.1);
+            color: var(--primary);
+            border: 1px solid rgba(10, 34, 194, 0.2);
+        }
+
+        .badge-dark {
+            background-color: rgba(255, 255, 255, 0.08);
+            color: var(--accent-blue);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.125rem;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--secondary-bg);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+
+        /* ==========================================================================
+           2. HEADER & NAVIGATION
+           ========================================================================== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
+        }
+
+        header.scrolled {
+            height: 70px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            color: var(--text-body);
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Mobile Nav Toggle */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--primary);
+            margin: 5px 0;
+            transition: var(--transition-fast);
+        }
+
+
+        /* ==========================================================================
+           3. HERO SECTION
+           ========================================================================== */
+        .hero {
+            background-color: var(--primary-dark);
+            background-image: radial-gradient(circle at 80% 20%, rgba(37, 153, 214, 0.15) 0%, transparent 50%),
+                              radial-gradient(circle at 10% 80%, rgba(10, 34, 194, 0.1) 0%, transparent 50%);
+            color: var(--white);
+            padding-top: 10rem;
+            padding-bottom: 7rem;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            z-index: 10;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            line-height: 1.15;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, var(--accent-blue) 0%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: rgba(241, 245, 249, 0.85);
+            margin-bottom: 2.5rem;
+            max-width: 580px;
+            font-weight: 300;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        /* Hero Video Component */
+        .hero-video-container {
+            position: relative;
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-color-dark);
+            aspect-ratio: 16 / 9;
+            background-color: #000;
+        }
+
+        .hero-video-cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .hero-video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(11, 21, 40, 0.8) 0%, rgba(11, 21, 40, 0.2) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .hero-video-overlay:hover {
+            background: linear-gradient(to top, rgba(11, 21, 40, 0.9) 0%, rgba(11, 21, 40, 0.4) 100%);
+        }
+
+        .hero-video-overlay:hover .hero-video-cover {
+            transform: scale(1.05);
+        }
+
+        .play-btn-circle {
+            width: 80px;
+            height: 80px;
+            background-color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(223, 167, 59, 0.4);
+            margin-bottom: 1.5rem;
+            position: relative;
+            transition: var(--transition-smooth);
+        }
+
+        .play-btn-circle::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            z-index: -1;
+            animation: pulse-ring 2s infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.6);
+                opacity: 0;
+            }
+        }
+
+        .play-btn-circle svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--primary);
+            margin-left: 4px;
+            transition: var(--transition-smooth);
+        }
+
+        .hero-video-overlay:hover .play-btn-circle {
+            transform: scale(1.1);
+            background-color: var(--accent-blue);
+        }
+
+        .hero-video-overlay:hover .play-btn-circle svg {
+            fill: var(--white);
+        }
+
+        .video-duration {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+
+        /* ==========================================================================
+           4. CAROUSEL / DIAPORAMA INTERACTIF
+           ========================================================================== */
+        .carousel-section {
+            background-color: var(--secondary-bg);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            background-color: var(--primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .carousel-track-container {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            aspect-ratio: 16 / 10;
+        }
+
+        .carousel-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(11, 21, 40, 0.95) 0%, rgba(11, 21, 40, 0.5) 50%, transparent 100%);
+            padding: 2.5rem;
+            color: var(--white);
+        }
+
+        .carousel-caption h3 {
+            color: var(--accent-blue);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .carousel-caption p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 700px;
+        }
+
+        /* Carousel Navigation Buttons */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            transition: var(--transition-smooth);
+        }
+
+        .carousel-btn:hover {
+            background-color: var(--white);
+            color: var(--primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .carousel-btn-left {
+            left: 1.5rem;
+        }
+
+        .carousel-btn-right {
+            right: 1.5rem;
+        }
+
+        .carousel-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        /* Carousel Dots Indicator */
+        .carousel-nav-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #cbd5e1;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .carousel-dot.active {
+            background-color: var(--accent-blue);
+            width: 28px;
+            border-radius: 6px;
+        }
+
+
+        /* ==========================================================================
+           5. VALUE PROPOSITION (BENEFITS GRID)
+           ========================================================================== */
+        .benefits {
+            background-color: var(--white);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--accent-blue));
+            opacity: 0;
+            transition: var(--transition-fast);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(223, 167, 59, 0.2);
+        }
+
+        .benefit-card:hover::before {
+            opacity: 1;
+        }
+
+        .benefit-icon-wrapper {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background-color: rgba(37, 153, 214, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            transition: var(--transition-smooth);
+        }
+
+        .benefit-card:hover .benefit-icon-wrapper {
+            background-color: var(--primary);
+            color: var(--white);
+            transform: scale(1.05);
+        }
+
+        .benefit-icon-wrapper svg {
+            width: 30px;
+            height: 30px;
+            fill: currentColor;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .benefit-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .benefit-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .benefit-card li {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+            position: relative;
+            padding-left: 1.25rem;
+        }
+
+        .benefit-card li::before {
+            content: "✓";
+            color: var(--accent-blue);
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+
+        /* ==========================================================================
+           6. REVENUE SIMULATOR (CALCULATOR)
+           ========================================================================== */
+        .simulator {
+            background-color: var(--primary-dark);
+            background-image: radial-gradient(circle at 10% 20%, rgba(37, 153, 214, 0.05) 0%, transparent 40%),
+                              radial-gradient(circle at 90% 80%, rgba(10, 34, 194, 0.08) 0%, transparent 40%);
+            color: var(--white);
+        }
+
+        .simulator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .simulator-inputs-panel {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color-dark);
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .simulator-inputs-panel h3 {
+            color: var(--white);
+            font-size: 1.75rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            border-bottom: 1px solid var(--border-color-dark);
+            padding-bottom: 1rem;
+        }
+
+        .input-group {
+            margin-bottom: 2.5rem;
+        }
+
+        .input-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .input-label {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .input-value-display {
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--accent-blue);
+            background-color: rgba(255, 255, 255, 0.08);
+            padding: 0.25rem 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+        }
+
+        /* Custom Range Input styling */
+        .range-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.15);
+            outline: none;
+            transition: background 450ms ease-in;
+        }
+
+        .range-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary) 100%);
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 2px solid var(--white);
+            transition: transform 0.1s ease-in-out;
+        }
+
+        .range-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+        }
+
+        .range-slider::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary) 100%);
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 2px solid var(--white);
+            transition: transform 0.1s ease-in-out;
+        }
+
+        .range-slider::-moz-range-thumb:hover {
+            transform: scale(1.15);
+        }
+
+        .simulator-results-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .results-summary-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid var(--border-color-dark);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .results-summary-card p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .results-summary-card .gross-value {
+            font-size: 2.75rem;
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: 0;
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+        }
+
+        .scenarios-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .scenario-card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color-dark);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition-smooth);
+        }
+
+        .scenario-card.recommended {
+            background: linear-gradient(180deg, rgba(37, 153, 214, 0.08) 0%, rgba(37, 153, 214, 0.02) 100%);
+            border-color: rgba(37, 153, 214, 0.4);
+            box-shadow: 0 15px 35px rgba(10, 34, 194, 0.15);
+        }
+
+        .scenario-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary) 100%);
+            color: var(--white);
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .scenario-card h4 {
+            color: var(--white);
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .scenario-breakdown {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .breakdown-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .breakdown-row .value {
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .net-result {
+            border-top: 1px dashed rgba(255, 255, 255, 0.15);
+            padding-top: 1.5rem;
+            text-align: center;
+        }
+
+        .net-result p {
+            font-size: 0.85rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .net-value {
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: var(--white);
+            transition: var(--transition-fast);
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+        }
+
+        .recommended .net-value {
+            color: var(--accent-blue);
+            text-shadow: 0 2px 10px rgba(37, 153, 214, 0.15);
+        }
+
+        .simulator-cta-wrapper {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+
+        /* ==========================================================================
+           7. REGISTRATION FORM (CONVERSION FUNNEL)
+           ========================================================================== */
+        .form-section {
+            background-color: var(--secondary-bg);
+            background-image: radial-gradient(circle at right bottom, rgba(224, 122, 95, 0.03) 0%, transparent 40%);
+        }
+
+        .form-container {
+            max-width: 750px;
+            margin: 0 auto;
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 4rem 3.5rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .form-header h2 {
+            font-size: 2.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .form-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group-full {
+            grid-column: span 2;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border-radius: 12px;
+            border: 1.5px solid #e2e8f0;
+            background-color: #fafafa;
+            color: var(--text-dark);
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+            outline: none;
+        }
+
+        .form-input:focus {
+            background-color: var(--white);
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 4px rgba(37, 153, 214, 0.1);
+        }
+
+        /* Error styling */
+        .form-group.error .form-input {
+            border-color: #ef4444;
+            background-color: #fef2f2;
+        }
+
+        .form-group.error .form-input:focus {
+            box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15);
+        }
+
+        .error-message {
+            font-size: 0.8rem;
+            color: #ef4444;
+            font-weight: 600;
+            display: none;
+        }
+
+        .form-group.error .error-message {
+            display: block;
+        }
+
+        /* Select custom dropdown */
+        .form-select {
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1.2rem center;
+            background-size: 1.2em;
+            padding-right: 3rem;
+            cursor: pointer;
+        }
+
+        /* Telephone Layout with prefix input simulation */
+        .tel-wrapper {
+            position: relative;
+            display: flex;
+        }
+
+        .tel-wrapper .form-input {
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+
+        .form-submit-wrapper {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .form-submit-wrapper .btn {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Success Overlay Modal */
+        .success-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(11, 21, 40, 0.7);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1100;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition-smooth);
+        }
+
+        .success-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .success-card {
+            background-color: var(--white);
+            border-radius: 24px;
+            padding: 3.5rem 3rem;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            transform: scale(0.9);
+            transition: var(--transition-smooth);
+        }
+
+        .success-overlay.active .success-card {
+            transform: scale(1);
+        }
+
+        .success-icon-circle {
+            width: 80px;
+            height: 80px;
+            background-color: #ecfdf5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #10b981;
+            margin: 0 auto 2rem auto;
+            border: 2px solid #a7f3d0;
+        }
+
+        .success-icon-circle svg {
+            width: 40px;
+            height: 40px;
+            fill: currentColor;
+        }
+
+        .success-card h3 {
+            font-size: 1.75rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .success-card p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+
+        /* ==========================================================================
+           8. VIDEO MODAL PLAYER
+           ========================================================================== */
+        .video-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1200;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition-smooth);
+        }
+
+        .video-modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .video-modal-content {
+            position: relative;
+            width: 90%;
+            max-width: 960px;
+            aspect-ratio: 16 / 9;
+            background-color: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+            transform: scale(0.9);
+            transition: var(--transition-smooth);
+        }
+
+        .video-modal.active .video-modal-content {
+            transform: scale(1);
+        }
+
+        .video-close-btn {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .video-close-btn:hover {
+            color: var(--accent-blue);
+        }
+
+        .video-close-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        /* Beautiful Simulated Video Animation inside modal (no actual heavy video) */
+        .simulated-player {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #0d1527;
+            position: relative;
+            color: var(--white);
+            font-family: inherit;
+        }
+
+        .simulated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(135deg, #0d1527 0%, #1e293b 100%);
+            z-index: 1;
+        }
+
+        .player-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 600px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .player-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .player-logo svg {
+            width: 40px;
+            height: 40px;
+            fill: currentColor;
+        }
+
+        .player-bar-animation {
+            width: 100%;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .player-bar-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(to right, var(--primary), var(--accent-blue));
+            border-radius: 2px;
+        }
+
+        .video-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 3;
+            font-size: 0.85rem;
+        }
+
+        .controls-left {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .control-btn {
+            background: none;
+            border: none;
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        .control-btn:hover {
+            color: var(--accent-blue);
+        }
+
+        .control-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+
+        /* ==========================================================================
+           9. FOOTER
+           ========================================================================== */
+        footer {
+            background-color: var(--primary);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 5rem 0 2.5rem 0;
+            border-top: 1px solid var(--border-color-dark);
+            font-size: 0.95rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-logo-col p {
+            margin-top: 1.25rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-blue);
+            transform: translateX(3px);
+        }
+
+        .footer-contact p {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-contact svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--accent-blue);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+
+        /* ==========================================================================
+           10. RESPONSIVE DESIGN (MEDIA QUERIES)
+           ========================================================================== */
+        @media (max-width: 1024px) {
+            html {
+                font-size: 15px;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .simulator-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 4.5rem 0;
+            }
+
+            .section-header {
+                margin-bottom: 3rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            /* Responsive Navigation Header */
+            .nav-toggle {
+                display: block;
+                z-index: 1001;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 75%;
+                max-width: 320px;
+                height: 100vh;
+                background-color: var(--white);
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 7rem 2.5rem 2.5rem 2.5rem;
+                transition: var(--transition-smooth);
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-toggle.active span:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+
+            .nav-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .nav-toggle.active span:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+
+            /* Carousel Layout adjustments */
+            .carousel-track-container {
+                aspect-ratio: 4 / 3;
+            }
+
+            .carousel-caption {
+                padding: 1.5rem;
+            }
+
+            .carousel-caption h3 {
+                font-size: 1.25rem;
+            }
+
+            .carousel-caption p {
+                font-size: 0.9rem;
+            }
+
+            /* Forms Mobile Styles */
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+
+            .form-group-full {
+                grid-column: span 1;
+            }
+
+            .form-container {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .form-header h2 {
+                font-size: 1.75rem;
+            }
+
+            /* Simulator layouts mobile */
+            .scenarios-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .scenario-badge {
+                top: -12px;
+                right: 50%;
+                transform: translateX(50%);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-actions .btn {
+                width: 100%;
+            }
+
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+            }
+
+            .carousel-btn-left {
+                left: 0.5rem;
+            }
+
+            .carousel-btn-right {
+                right: 0.5rem;
+            }
+
+            .simulator-inputs-panel {
+                padding: 2rem 1.25rem;
+            }
+
+            .results-summary-card .gross-value {
+                font-size: 2.2rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+
+        /* ==========================================================================
+           11. NOTRE VISION SECTION STYLES
+           ========================================================================== */
+        .vision-section {
+            background-color: var(--white);
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .vision-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .vision-left {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .vision-quote-card {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 100%);
+            border: 1px solid rgba(10, 34, 194, 0.08);
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            position: relative;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-smooth);
+        }
+
+        .vision-quote-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(37, 153, 214, 0.2);
+        }
+
+        .vision-quote-card::before {
+            content: '“';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 8rem;
+            color: var(--accent-blue);
+            opacity: 0.15;
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .vision-quote-text {
+            font-size: 1.25rem;
+            font-style: italic;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .vision-quote-author {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .vision-quote-author::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 2px;
+            background-color: var(--accent-blue);
+        }
+
+        .vision-right {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        /* Interactive tabs/cards for Vision */
+        .vision-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .vision-tab-btn {
+            flex: 1;
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1.5px solid rgba(10, 34, 194, 0.08);
+            background-color: var(--secondary-bg);
+            color: var(--text-muted);
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-align: center;
+        }
+
+        .vision-tab-btn:hover {
+            border-color: var(--accent-blue);
+            color: var(--primary);
+            background-color: var(--white);
+        }
+
+        .vision-tab-btn.active {
+            border-color: var(--primary);
+            background-color: var(--primary);
+            color: var(--white);
+            box-shadow: 0 8px 20px rgba(10, 34, 194, 0.15);
+        }
+
+        .vision-tab-content {
+            background-color: var(--secondary-bg);
+            border: 1px solid rgba(10, 34, 194, 0.08);
+            border-radius: 20px;
+            padding: 2.5rem;
+            min-height: 220px;
+            display: none;
+            flex-direction: column;
+            gap: 1rem;
+            transition: var(--transition-smooth);
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .vision-tab-content.active {
+            display: flex;
+        }
+
+        .vision-content-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .vision-content-text {
+            color: var(--text-body);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .vision-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .vision-tabs {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+    <header id="header">
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="AfricaFirst Online">
+            </a>
+            
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#vision">Notre Vision</a></li>
+                    <li><a href="#avantages">Avantages</a></li>
+                    <li><a href="#diaporama">Aperçu</a></li>
+                    <li><a href="#simulateur">Simulateur</a></li>
+                    <li><a href="#partenariat">Candidature</a></li>
+                    <li><a href="#partenariat" class="btn btn-outline" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">Devenir Formateur</a></li>
+                </ul>
+            </nav>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu de navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==========================================================================
+           1. HERO SECTION
+           ========================================================================== -->
+        <section class="hero" id="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="badge badge-dark">Recrutement Experts & Formateurs</span>
+                    <h1 class="hero-title">
+                        Transformez votre expertise en un <span>business d'impact</span> et bâtissez l'Afrique de demain.
+                    </h1>
+                    <p class="hero-subtitle">
+                        AfricaFirst est l'écosystème d'apprentissage idéal pour digitaliser, sécuriser et diffuser à grande échelle votre savoir en Afrique francophone. Rejoignez l'élite pédagogique.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#partenariat" class="btn btn-primary">Rejoindre l'aventure</a>
+                        <a href="#simulateur" class="btn btn-secondary">Simuler mes gains</a>
+                    </div>
+                </div>
+                
+                <div class="hero-video-wrapper">
+                    <div class="hero-video-container" id="play-video-trigger">
+                        <img src="assets/video_cover.png" alt="Vidéo de présentation AfricaFirst" class="hero-video-cover">
+                        <div class="hero-video-overlay">
+                            <div class="play-btn-circle">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8,5.14V19.14L19,12.14L8,5.14Z"/>
+                                </svg>
+                            </div>
+                            <span class="video-duration">DÉCOUVRIR LE CONCEPT (02:45)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           1.5. NOTRE VISION SECTION (INTERACTIVE & AERE)
+           ========================================================================== -->
+        <section class="vision-section" id="vision">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge">Notre Vision</span>
+                    <h2>Bâtir l'Afrique de Demain par l'Éducation Digitale</h2>
+                    <p>Une conviction profonde qui guide chacune de nos actions.</p>
+                </div>
+                
+                <div class="vision-grid">
+                    <!-- Left Column: Nelson Mandela Quote -->
+                    <div class="vision-left">
+                        <div class="vision-quote-card">
+                            <p class="vision-quote-text">
+                                "L'éducation est l'arme la plus puissante qu'on puisse utiliser pour changer le monde."
+                            </p>
+                            <div class="vision-quote-author">Nelson Mandela</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Interactive Tabs for the vision details -->
+                    <div class="vision-right">
+                        <div class="vision-tabs" role="tablist">
+                            <button class="vision-tab-btn active" role="tab" aria-selected="true" aria-controls="conviction-tab" id="tab-1">
+                                Notre Conviction
+                            </button>
+                            <button class="vision-tab-btn" role="tab" aria-selected="false" aria-controls="defis-tab" id="tab-2">
+                                Les Défis
+                            </button>
+                            <button class="vision-tab-btn" role="tab" aria-selected="false" aria-controls="ambition-tab" id="tab-3">
+                                Notre Ambition
+                            </button>
+                        </div>
+                        
+                        <div class="vision-tab-content active" id="conviction-tab" role="tabpanel" aria-labelledby="tab-1">
+                            <h3 class="vision-content-title">Une Conviction Profonde</h3>
+                            <p class="vision-content-text">
+                                «&nbsp;L'éducation est l'arme la plus puissante qu'on puisse utiliser pour changer le monde&nbsp;», affirmait Nelson Mandela. Ces mots résonnent avec une acuité particulière lorsqu'on observe les défis auxquels fait face l'Afrique aujourd'hui. Le manque d'accès à une éducation et une formation de qualité demeure l'un des principaux freins au développement de notre continent.
+                            </p>
+                            <p class="vision-content-text">
+                                Chez AfricaFirst, nous sommes convaincus qu'il est possible, à notre échelle, de contribuer à inverser cette tendance.
+                            </p>
+                        </div>
+                        
+                        <div class="vision-tab-content" id="defis-tab" role="tabpanel" aria-labelledby="tab-2">
+                            <h3 class="vision-content-title">Faire face aux Défis</h3>
+                            <p class="vision-content-text">
+                                Le manque d'accès à une éducation et une formation de qualité demeure l'un des principaux freins au développement de notre continent. Des millions de jeunes africains talentueux n'ont pas accès aux compétences dont ils ont besoin pour transformer leur vie et contribuer à l'essor de leur communauté.
+                            </p>
+                            <p class="vision-content-text">
+                                Les formations de qualité restent souvent concentrées dans les grandes métropoles, hors de portée financière ou géographique pour la majorité. L'Afrique francophone, en particulier, souffre d'un déficit criant de contenus éducatifs numériques adaptés à ses réalités.
+                            </p>
+                        </div>
+                        
+                        <div class="vision-tab-content" id="ambition-tab" role="tabpanel" aria-labelledby="tab-3">
+                            <h3 class="vision-content-title">Notre Ambition</h3>
+                            <p class="vision-content-text">
+                                Notre vision s'articule autour d'une ambition claire&nbsp;: faire de la formation en ligne un catalyseur de transformation sociale et économique en Afrique francophone. Nous voulons créer un pont entre les experts, formateurs et professionnels d'excellence et les millions d'apprenants avides de connaissances sur le continent.
+                            </p>
+                            <p class="vision-content-text">
+                                En rejoignant AfricaFirst en tant que formateur, vous ne créez pas seulement un business rentable — vous participez activement à la construction de l'Afrique de demain, une formation à la fois.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           2. DIAPORAMA INTERACTIF (CAROUSEL)
+           ========================================================================== -->
+        <section class="carousel-section" id="diaporama">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge">Immersion Plateforme</span>
+                    <h2>Découvrez l'univers AfricaFirst</h2>
+                    <p>Découvrez les outils haut de gamme mis à votre disposition pour assurer le suivi de vos étudiants et la diffusion sécurisée de vos cours.</p>
+                </div>
+
+                <div class="carousel-container">
+                    <button class="carousel-btn carousel-btn-left" id="carousel-prev" aria-label="Slide précédente">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="carousel-track-container">
+                        <div class="carousel-track" id="carousel-track">
+                            <!-- Slide 1 -->
+                            <div class="carousel-slide">
+                                <img src="assets/video_cover.png" alt="Présentation de la plateforme AfricaFirst">
+                                <div class="carousel-caption">
+                                    <h3>Une plateforme pensée pour l'Afrique</h3>
+                                    <p>Formez, vendez et développez votre activité avec des outils modernes conçus pour les formateurs africains ambitieux.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-slide">
+                                <img src="assets/dashboard.png" alt="Tableau de bord du formateur AfricaFirst">
+                                <div class="carousel-caption">
+                                    <h3>Tableau de bord Formateur</h3>
+                                    <p>Suivez vos ventes brutes et nettes en temps réel. Analysez le taux de rétention, les statistiques d'assiduité des apprenants et gérez vos demandes de versement en un clic.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-slide">
+                                <img src="assets/Liste%20des%20Cours.png" alt="Liste des cours AfricaFirst">
+                                <div class="carousel-caption">
+                                    <h3>Gestion du catalogue</h3>
+                                    <p>Visualisez l'ensemble de vos formations, leurs prix et leur statut. Filtrez, modifiez ou publiez vos cours en quelques clics depuis une interface claire et structurée.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="carousel-slide">
+                                <img src="assets/Cr%C3%A9er%20un%20Cours.png" alt="Création d'un cours sur AfricaFirst">
+                                <div class="carousel-caption">
+                                    <h3>Création de cours simplifiée</h3>
+                                    <p>Renseignez les informations générales, définissez vos tarifs, ajoutez vos visuels et associez vos leçons grâce à un éditeur riche et des paramètres de publication flexibles.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 5 -->
+                            <div class="carousel-slide">
+                                <img src="assets/Liste%20des%20Le%C3%A7ons.png" alt="Liste des leçons AfricaFirst">
+                                <div class="carousel-caption">
+                                    <h3>Organisation des leçons</h3>
+                                    <p>Structurez vos contenus pédagogiques, suivez le statut de chaque leçon et associez-les facilement à vos cours pour un parcours d'apprentissage cohérent.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 6 -->
+                            <div class="carousel-slide">
+                                <img src="assets/Rapport%20des%20Ventes.png" alt="Rapport des ventes AfricaFirst">
+                                <div class="carousel-caption">
+                                    <h3>Suivi des ventes</h3>
+                                    <p>Consultez vos rapports mensuels détaillés : quantités vendues, commissions, revenus nets et totaux. Exportez vos chiffres pour un pilotage financier précis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-btn carousel-btn-right" id="carousel-next" aria-label="Slide suivante">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="carousel-nav-dots" id="carousel-dots">
+                    <!-- Dots generated dynamically via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           3. BLOC DES AVANTAGES COMPLETS (VALUE PROP)
+           ========================================================================== -->
+        <section class="benefits" id="avantages">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge">Pourquoi nous choisir ?</span>
+                    <h2>Une proposition de valeur unique et sans équivalent</h2>
+                    <p>Développez votre activité dans un écosystème conçu pour votre rentabilité, votre sérénité et votre impact social.</p>
+                </div>
+
+                <div class="benefits-grid">
+                    <!-- Advantage A -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon-wrapper">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5,6h14c1.1,0,2,0.9,2,2v8c0,1.1-0.9,2-2,2H5c-1.1,0-2-0.9-2-2V8C3,6.9,3.9,6,5,6z M12,9c-1.66,0-3,1.34-3,3s1.34,3,3,3 s3-1.34,3-3S13.66,9,12,9z M19,10h-2v1h2V10z M19,13h-2v1h2V13z M5,10h2v1H5V10z M5,13h2v1H5V13z" />
+                            </svg>
+                        </div>
+                        <h3>Revenus Attractifs et Transparents</h3>
+                        <p style="font-weight: 700; margin-bottom: 0.5rem; color: var(--text-dark);">Monétisez votre expertise</p>
+                        <ul>
+                            <li>Votre savoir a de la valeur, et nous le reconnaissons.</li>
+                            <li>AfricaFirst applique un des modèles de rémunération les plus généreux du marché africain.</li>
+                            <li>Plus vous vendez, plus vous gagnez.</li>
+                            <li>Contrairement aux formations en présentiel limitées par la taille d'une salle, vos revenus sur AfricaFirst sont potentiellement illimités.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Advantage B -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon-wrapper">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.4z" />
+                            </svg>
+                        </div>
+                        <h3>Plateforme de Visibilité Exceptionnelle</h3>
+                        <p style="font-weight: 700; margin-bottom: 0.5rem; color: var(--text-dark);">Touchez des milliers d'apprenants potentiels</p>
+                        <ul>
+                            <li>Accès immédiat à notre base d'utilisateurs en croissance</li>
+                            <li>Visibilité auprès des PME et grandes entreprises d'Afrique francophone</li>
+                            <li>Marketing et promotion de vos formations par AfricaFirst</li>
+                            <li>Référencement optimisé de vos contenus.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Advantage C -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon-wrapper">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z" />
+                            </svg>
+                        </div>
+                        <h3>Service Clé en Main</h3>
+                        <p style="font-weight: 700; margin-bottom: 0.5rem; color: var(--text-dark);">Accompagnement technique</p>
+                        <ul>
+                            <li>Concentrez-vous sur votre contenu, nous nous occupons du reste</li>
+                            <li>Si besoin, accompagnement à la création de vos formations</li>
+                            <li>Sensibilisation aux techniques de captation (enregistrement d'écran, etc.)</li>
+                            <li>Hébergement et mise en ligne de vos formations</li>
+                            <li>Gestion technique de la plateforme</li>
+                            <li>Support technique réactif</li>
+                        </ul>
+                    </div>
+
+                    <!-- Advantage D -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon-wrapper">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M16 17.01V10h-2v7.01h-3L15 21l4-3.99h-3zM9 3L5 6.99h3V14h2V6.99h3L9 3z" />
+                            </svg>
+                        </div>
+                        <h3>Revenus Passifs et Scalabilité</h3>
+                        <p style="font-weight: 700; margin-bottom: 0.5rem; color: var(--text-dark);">Créez une fois, vendez indéfiniment</p>
+                        <ul>
+                            <li>Vos formations génèrent des revenus même pendant votre sommeil</li>
+                            <li>Pas de limite au nombre d'apprenants par formation</li>
+                            <li>Revenus récurrents sans effort supplémentaire</li>
+                            <li>Un seul enregistrement touche des milliers de personnes</li>
+                        </ul>
+                    </div>
+
+                    <!-- Advantage E -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon-wrapper">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z" />
+                            </svg>
+                        </div>
+                        <h3>Impact Social et Contribution</h3>
+                        <p style="font-weight: 700; margin-bottom: 0.5rem; color: var(--text-dark);">Transformez l'Afrique par votre expertise</p>
+                        <ul>
+                            <li>Participez à la démocratisation de l'accès à la formation en Afrique</li>
+                            <li>Contribuez à l'élévation du niveau de compétences sur le continent</li>
+                            <li>Créez un héritage éducatif durable</li>
+                            <li>Devenez acteur de la transformation digitale africaine</li>
+                        </ul>
+                    </div>
+
+                    <!-- Advantage F -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon-wrapper">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9 14H7v-7h3v7zm4 0h-3V7h3v10zm4 0h-3v-4h3v4z" />
+                            </svg>
+                        </div>
+                        <h3>Reporting Détaillé et Transparence</h3>
+                        <p style="font-weight: 700; margin-bottom: 0.5rem; color: var(--text-dark);">Suivez votre activité en temps réel</p>
+                        <ul>
+                            <li>Tableau de bord détaillé de vos ventes</li>
+                            <li>Statistiques de consultation de vos formations</li>
+                            <li>Rapport mensuel automatique</li>
+                            <li>Tracking des revenus par formation et par canal</li>
+                            <li>Visibilité complète sur vos performances</li>
+                        </ul>
+                    </div>
+
+                    <!-- Advantage G -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon-wrapper">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                            </svg>
+                        </div>
+                        <h3>Communauté et Réseautage</h3>
+                        <p style="font-weight: 700; margin-bottom: 0.5rem; color: var(--text-dark);">Rejoignez un écosystème d'excellence</p>
+                        <ul>
+                            <li>Échangez avec d'autres experts africains</li>
+                            <li>Opportunités de collaborations et de patrimoines</li>
+                            <li>Événements et webinaires pour formateurs</li>
+                            <li>Accès à des ressources pédagogiques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           4. SIMULATEUR DE REVENUS REVISÉ
+           ========================================================================== -->
+        <section class="simulator" id="simulateur">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge badge-dark">Outil d'estimation</span>
+                    <h2 style="color: var(--white);">Estimez vos gains avec AfricaFirst</h2>
+                    <p style="color: rgba(255, 255, 255, 0.7);">Ajustez les curseurs ci-dessous pour projeter vos futurs revenus annuels avec notre modèle de partage 50/50.</p>
+                </div>
+
+                <div class="simulator-grid">
+                    <!-- Left: Sliders Panel -->
+                    <div class="simulator-inputs-panel">
+                        <h3>Vos Hypothèses de Vente</h3>
+                        
+                        <!-- Input 1: Course sales volume -->
+                        <div class="input-group">
+                            <div class="input-header">
+                                <label for="volume-slider" class="input-label">Formations vendues par an</label>
+                                <span class="input-value-display" id="volume-val">100</span>
+                            </div>
+                            <input type="range" id="volume-slider" min="1" max="5000" value="100" class="range-slider">
+                        </div>
+
+                        <!-- Input 2: Price per course -->
+                        <div class="input-group">
+                            <div class="input-header">
+                                <label for="price-slider" class="input-label">Prix unitaire de la formation</label>
+                                <span class="input-value-display" id="price-val">100 000 FCFA</span>
+                            </div>
+                            <input type="range" id="price-slider" min="50000" max="300000" step="25000" value="100000" class="range-slider">
+                        </div>
+                    </div>
+
+                    <!-- Right: Results Panel -->
+                    <div class="simulator-results-panel">
+                        <!-- Gross Value display -->
+                        <div class="results-summary-card">
+                            <p>Revenu Global Généré par vos Ventes (Brut)</p>
+                            <div class="gross-value" id="gross-revenue-val">10 000 000 FCFA</div>
+                        </div>
+
+                        <!-- Votre Part Formateur (50%) -->
+                        <div class="scenarios-container">
+                            <div class="scenario-card recommended">
+                                <span class="scenario-badge">Votre Part (50%)</span>
+                                <div>
+                                    <h4>Rémunération Formateur<br><small style="font-weight:400; opacity:0.8;">(Toutes prestations incluses)</small></h4>
+                                    <div class="scenario-breakdown">
+                                        <div class="breakdown-row">
+                                            <span>Frais de plateforme :</span>
+                                            <span class="value" style="color: #34d399;">Offerts (0%)</span>
+                                        </div>
+                                        <div class="breakdown-row">
+                                            <span>Hébergement Cloud :</span>
+                                            <span class="value" style="color: #34d399;">Inclus</span>
+                                        </div>
+                                        <div class="breakdown-row">
+                                            <span>Support &amp; Marketing :</span>
+                                            <span class="value" style="color: #34d399;">Inclus</span>
+                                        </div>
+                                        <div class="breakdown-row">
+                                            <span>Passerelles Mobile Money :</span>
+                                            <span class="value" style="color: #34d399;">Inclus</span>
+                                        </div>
+                                        <div class="breakdown-row">
+                                            <span>Promotion &amp; Référencement :</span>
+                                            <span class="value" style="color: #34d399;">Inclus</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="net-result">
+                                    <p>Votre Revenu Net Final</p>
+                                    <div class="net-value" id="scenario-a-net">5 000 000 FCFA</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="simulator-cta-wrapper">
+                    <a href="#partenariat" class="btn btn-primary btn-lg">Commencer à générer ces revenus</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. REGISTRATION FORM (CONVERSION)
+           ========================================================================== -->
+        <section class="form-section" id="partenariat">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header">
+                        <span class="badge">Partenariat d'affaires</span>
+                        <h2>Devenir Formateur AfricaFirst</h2>
+                        <p>Candidatez aujourd'hui pour intégrer notre collectif d'experts. Notre équipe vous contactera sous 48h ouvrées.</p>
+                    </div>
+
+                    <form id="recruitment-form" novalidate>
+                        <div class="form-grid">
+                            <!-- Nom & Prénom -->
+                            <div class="form-group">
+                                <label for="fullname">Nom & Prénom *</label>
+                                <input type="text" id="fullname" class="form-input" placeholder="Ex: Dr. Koffi Amadou" required>
+                                <span class="error-message" id="fullname-error">Le nom complet est obligatoire.</span>
+                            </div>
+
+                            <!-- Email Pro -->
+                            <div class="form-group">
+                                <label for="email">Adresse Email Professionnelle *</label>
+                                <input type="email" id="email" class="form-input" placeholder="Ex: k.amadou@monentreprise.com" required>
+                                <span class="error-message" id="email-error">Veuillez entrer une adresse e-mail professionnelle valide.</span>
+                            </div>
+
+                            <!-- Téléphone + Indicatif -->
+                            <div class="form-group">
+                                <label for="phone">Numéro de Téléphone (avec indicatif pays) *</label>
+                                <input type="tel" id="phone" class="form-input" placeholder="Ex: +225 07 00 00 00 00" required>
+                                <span class="error-message" id="phone-error">Un numéro de téléphone valide est obligatoire.</span>
+                            </div>
+
+                            <!-- Domaine d'Expertise -->
+                            <div class="form-group">
+                                <label for="expertise">Domaine d'Expertise Majeur *</label>
+                                <select id="expertise" class="form-input form-select" required>
+                                    <option value="" disabled selected>Sélectionnez votre domaine</option>
+                                    <option value="technologies">Technologies & Numérique</option>
+                                    <option value="management">Management & Leadership</option>
+                                    <option value="finance">Gestion & Finance</option>
+                                    <option value="entrepreneuriat">Entrepreneuriat</option>
+                                    <option value="marketing">Marketing & Vente</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                                <span class="error-message" id="expertise-error">Veuillez sélectionner un domaine d'expertise.</span>
+                            </div>
+
+                            <!-- LinkedIn / Portfolio Link (Optionnel) -->
+                            <div class="form-group form-group-full">
+                                <label for="portfolio">Lien LinkedIn ou Portfolio (Optionnel)</label>
+                                <input type="url" id="portfolio" class="form-input" placeholder="Ex: https://www.linkedin.com/in/monprofil">
+                                <span class="error-message" id="portfolio-error">Veuillez saisir un lien URL valide (commençant par http:// ou https://).</span>
+                            </div>
+                        </div>
+
+                        <div class="form-submit-wrapper">
+                            <button type="submit" class="btn btn-primary" id="submit-btn">
+                                Soumettre ma candidature d'expert
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col footer-logo-col">
+                <a href="#" class="logo">
+                    <img src="assets/logo.png" alt="AfricaFirst Online">
+                </a>
+                <p>Digitaliser, sécuriser et monétiser les compétences clés en Afrique francophone pour libérer le potentiel de la jeunesse.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#avantages">Avantages</a></li>
+                    <li><a href="#diaporama">Captures d'Écran</a></li>
+                    <li><a href="#simulateur">Simulateur de Gains</a></li>
+                    <li><a href="#partenariat">Devenir Partenaire</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Mentions Légales</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Conditions d'Utilisation</a></li>
+                    <li><a href="#">Politique de Confidentialité</a></li>
+                    <li><a href="#">Protection des Données</a></li>
+                    <li><a href="#">Charte Déontologique</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-contact">
+                <h4>Contact Professionnel</h4>
+                <p>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20,4H4C2.9,4 2,4.9 2,6V18C2,19.1 2.9,20 4,20H20C21.1,20 22,19.1 22,18V6C22,4.9 21.1,4 20,4M20,8L12,13L4,8V6L12,11L20,6V8Z"/></svg>
+                    partenaires@africafirst.com
+                </p>
+                <p>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M11,17H13V11H11V17M11,9H13V7H11V9Z"/></svg>
+                    Support technique formateurs 7j/7
+                </p>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 AfricaFirst E-Learning Platform. Tous droits réservés.</p>
+            <p>Conçu pour bâtir la souveraineté intellectuelle africaine.</p>
+        </div>
+    </footer>
+
+
+    <!-- ==========================================================================
+       MODAL DE LECTURE VIDÉO (SIMULATEUR DE LECTURE ANIMÉ)
+       ========================================================================== -->
+    <div class="video-modal" id="video-modal" role="dialog" aria-modal="true">
+        <div class="video-modal-content">
+            <button class="video-close-btn" id="close-video-btn" aria-label="Fermer la vidéo">
+                Fermer
+                <svg viewBox="0 0 24 24">
+                    <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/>
+                </svg>
+            </button>
+            
+            <div class="simulated-player">
+                <div class="simulated-bg"></div>
+                <div class="player-content">
+                    <div class="player-logo">
+                        <img src="assets/logo.png" alt="AfricaFirst Online" style="height: 40px; width: auto; object-fit: contain;">
+                    </div>
+                    <h3 style="color: var(--white); font-size: 1.5rem; margin-bottom: 0.5rem;" id="player-title">Présentation d'AfricaFirst</h3>
+                    <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.95rem;">Visite guidée virtuelle du Dashboard et des outils du formateur d'excellence.</p>
+                    
+                    <div class="player-bar-animation">
+                        <div class="player-bar-progress" id="player-progress"></div>
+                    </div>
+                    <span id="player-time-display" style="font-size: 0.9rem; font-weight: bold; color: var(--accent-gold);">0:00 / 2:45</span>
+                </div>
+                
+                <div class="video-controls">
+                    <div class="controls-left">
+                        <button class="control-btn" id="sim-play-toggle" aria-label="Play/Pause">
+                            <svg viewBox="0 0 24 24" id="sim-play-icon">
+                                <path d="M8,5.14V19.14L19,12.14L8,5.14Z"/>
+                            </svg>
+                        </button>
+                        <span id="sim-time-indicator">00:00 / 02:45</span>
+                    </div>
+                    <div class="controls-right">
+                        <button class="control-btn" aria-label="Volume">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18.03,19.86 21,16.28 21,12C21,7.72 18.03,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.77 16.5,12M12,4L8.7,7H4V17H8.7L12,20V4Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+       SUCCESS MODAL AFTER FORM SUBMISSION
+       ========================================================================== -->
+    <div class="success-overlay" id="success-overlay">
+        <div class="success-card">
+            <div class="success-icon-circle">
+                <svg viewBox="0 0 24 24">
+                    <path d="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41-1.41L9,16.17z"/>
+                </svg>
+            </div>
+            <h3>Candidature Reçue !</h3>
+            <p>Félicitations, votre demande de partenariat a été enregistrée avec succès. Notre responsable des relations formateurs va étudier votre profil avec la plus grande attention.<br><br>Vous recevrez un e-mail ou un appel téléphonique sous <strong>48 heures ouvrées</strong> pour convenir d'un rendez-vous de présentation.</p>
+            <button class="btn btn-primary" id="success-close-btn" style="width: 100%;">Fermer la fenêtre</button>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+       JAVASCRIPT FOR INTERACTIVE LOGIC
+       ========================================================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // ==========================================================================
+            // A. SCROLL DETECTOR FOR HEADER STICKINESS
+            // ==========================================================================
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // ==========================================================================
+            // B. RESPONSIVE MOBILE NAVIGATION MENU
+            // ==========================================================================
+            const navToggle = document.getElementById('nav-toggle');
+            const navLinks = document.getElementById('nav-links');
+            const links = navLinks.querySelectorAll('a');
+
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close navigation on clicking a link
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+
+            // ==========================================================================
+            // C. CAROUSEL / DIAPORAMA LOGIC
+            // ==========================================================================
+            const track = document.getElementById('carousel-track');
+            const slides = Array.from(track.children);
+            const prevButton = document.getElementById('carousel-prev');
+            const nextButton = document.getElementById('carousel-next');
+            const dotsContainer = document.getElementById('carousel-dots');
+            
+            let currentIndex = 0;
+            const slideCount = slides.length;
+            let autoPlayTimer = null;
+
+            // Generate dots dynamically
+            slides.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.classList.add('carousel-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.setAttribute('aria-label', `Aller à la diapositive ${index + 1}`);
+                dotsContainer.appendChild(dot);
+            });
+
+            const dots = Array.from(dotsContainer.children);
+
+            // Move to slide
+            const updateSlidePosition = (index) => {
+                track.style.transform = `translateX(-${index * 100}%)`;
+                
+                // Update dots
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[index].classList.add('active');
+                currentIndex = index;
+            };
+
+            // Prev & Next listeners
+            prevButton.addEventListener('click', () => {
+                let newIndex = currentIndex - 1;
+                if (newIndex < 0) newIndex = slideCount - 1;
+                updateSlidePosition(newIndex);
+                resetAutoPlay();
+            });
+
+            nextButton.addEventListener('click', () => {
+                let newIndex = currentIndex + 1;
+                if (newIndex >= slideCount) newIndex = 0;
+                updateSlidePosition(newIndex);
+                resetAutoPlay();
+            });
+
+            // Dot navigation click
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    updateSlidePosition(index);
+                    resetAutoPlay();
+                });
+            });
+
+            // AutoPlay functions
+            const startAutoPlay = () => {
+                autoPlayTimer = setInterval(() => {
+                    let newIndex = currentIndex + 1;
+                    if (newIndex >= slideCount) newIndex = 0;
+                    updateSlidePosition(newIndex);
+                }, 5000);
+            };
+
+            const resetAutoPlay = () => {
+                clearInterval(autoPlayTimer);
+                startAutoPlay();
+            };
+
+            // Touch Swipe support on Mobile for carousel
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            track.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            track.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
+
+            const handleSwipe = () => {
+                const swipeThreshold = 50;
+                if (touchStartX - touchEndX > swipeThreshold) {
+                    // Swiped left -> next
+                    let newIndex = currentIndex + 1;
+                    if (newIndex >= slideCount) newIndex = 0;
+                    updateSlidePosition(newIndex);
+                    resetAutoPlay();
+                } else if (touchEndX - touchStartX > swipeThreshold) {
+                    // Swiped right -> prev
+                    let newIndex = currentIndex - 1;
+                    if (newIndex < 0) newIndex = slideCount - 1;
+                    updateSlidePosition(newIndex);
+                    resetAutoPlay();
+                }
+            };
+
+            // Initialize carousel autoplay
+            startAutoPlay();
+
+
+            // ==========================================================================
+            // D. REVENUE SIMULATOR (CALCULATOR — 50/50 MODEL)
+            // ==========================================================================
+            const volumeSlider = document.getElementById('volume-slider');
+            const priceSlider = document.getElementById('price-slider');
+            
+            const volumeVal = document.getElementById('volume-val');
+            const priceVal = document.getElementById('price-val');
+            
+            const grossValDisplay = document.getElementById('gross-revenue-val');
+            const scenarioANetDisplay = document.getElementById('scenario-a-net');
+
+            // Format number helper (French grouping: 1 000 000)
+            const formatNumber = (value) => {
+                const rounded = Math.round(Number(value)) || 0;
+                try {
+                    return new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 0 })
+                        .format(rounded)
+                        .replace(/\u202f/g, ' ')
+                        .replace(/\u00a0/g, ' ');
+                } catch (_) {
+                    return rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+                }
+            };
+
+            const formatCurrency = (val) => `${formatNumber(val)} FCFA`;
+
+            // Update calculations
+            const updateSimulatorResults = () => {
+                const X = parseInt(volumeSlider.value);
+                const P = parseInt(priceSlider.value);
+
+                // Update text indicators under sliders
+                volumeVal.textContent = formatNumber(X);
+                priceVal.textContent = `${formatNumber(P)} FCFA`;
+
+                // 1. Gross Revenue
+                const grossRevenue = X * P;
+                grossValDisplay.textContent = formatCurrency(grossRevenue);
+
+                // 2. Formateur net = 50% du brut
+                const netFormateur = grossRevenue * 0.50;
+                scenarioANetDisplay.textContent = formatCurrency(netFormateur);
+            };
+
+            // Event Listeners for sliders input (realtime feedback)
+            volumeSlider.addEventListener('input', updateSimulatorResults);
+            priceSlider.addEventListener('input', updateSimulatorResults);
+
+            // Initial computation
+            updateSimulatorResults();
+
+
+            // ==========================================================================
+            // E. HIGH FIDELITY SIMULATED VIDEO PLAYER (MODAL)
+            // ==========================================================================
+            const triggerVideo = document.getElementById('play-video-trigger');
+            const videoModal = document.getElementById('video-modal');
+            const closeVideoBtn = document.getElementById('close-video-btn');
+            
+            // Video animation states
+            const simPlayToggle = document.getElementById('sim-play-toggle');
+            const simPlayIcon = document.getElementById('sim-play-icon');
+            const playerProgress = document.getElementById('player-progress');
+            const playerTimeDisplay = document.getElementById('player-time-display');
+            const simTimeIndicator = document.getElementById('sim-time-indicator');
+
+            let isPlaying = false;
+            let currentVideoTime = 0;
+            const totalVideoTime = 165; // 2 minutes 45 seconds (165s)
+            let videoTimer = null;
+
+            const formatVideoTime = (seconds) => {
+                const m = Math.floor(seconds / 60);
+                const s = Math.floor(seconds % 60);
+                return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+            };
+
+            const toggleSimPlayState = () => {
+                isPlaying = !isPlaying;
+                if (isPlaying) {
+                    // Set pause icon
+                    simPlayIcon.innerHTML = `<path d="M6,19H10V5H6V19M14,5v14h4V5H14Z"/>`;
+                    
+                    videoTimer = setInterval(() => {
+                        currentVideoTime++;
+                        if (currentVideoTime >= totalVideoTime) {
+                            currentVideoTime = 0;
+                            toggleSimPlayState();
+                        }
+                        
+                        // Update Progress bar & labels
+                        const percent = (currentVideoTime / totalVideoTime) * 100;
+                        playerProgress.style.width = `${percent}%`;
+                        
+                        const timeStr = `${formatVideoTime(currentVideoTime)} / ${formatVideoTime(totalVideoTime)}`;
+                        playerTimeDisplay.textContent = timeStr;
+                        simTimeIndicator.textContent = timeStr;
+                    }, 1000);
+                } else {
+                    // Set play icon
+                    simPlayIcon.innerHTML = `<path d="M8,5.14V19.14L19,12.14L8,5.14Z"/>`;
+                    clearInterval(videoTimer);
+                }
+            };
+
+            triggerVideo.addEventListener('click', () => {
+                videoModal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // block scrolling behind
+                toggleSimPlayState(); // auto play simulated demo
+            });
+
+            const closeVideo = () => {
+                videoModal.classList.remove('active');
+                document.body.style.overflow = ''; // restore scrolling
+                if (isPlaying) {
+                    toggleSimPlayState();
+                }
+                currentVideoTime = 0;
+                playerProgress.style.width = '0%';
+                playerTimeDisplay.textContent = `00:00 / 02:45`;
+                simTimeIndicator.textContent = `00:00 / 02:45`;
+            };
+
+            closeVideoBtn.addEventListener('click', closeVideo);
+            
+            // Close modal when clicking outside content area
+            videoModal.addEventListener('click', (e) => {
+                if (e.target === videoModal) {
+                    closeVideo();
+                }
+            });
+
+            simPlayToggle.addEventListener('click', toggleSimPlayState);
+
+
+            // ==========================================================================
+            // F. PARTNERSHIP FORM SUBMISSION & VALIDATION
+            // ==========================================================================
+            const form = document.getElementById('recruitment-form');
+            const successOverlay = document.getElementById('success-overlay');
+            const successCloseBtn = document.getElementById('success-close-btn');
+
+            // Fields selectors
+            const fullnameInput = document.getElementById('fullname');
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone');
+            const expertiseInput = document.getElementById('expertise');
+            const portfolioInput = document.getElementById('portfolio');
+
+            // Set error states helper
+            const setFieldError = (input, message) => {
+                const group = input.parentElement;
+                group.classList.add('error');
+                const errorSpan = group.querySelector('.error-message');
+                if (errorSpan) errorSpan.textContent = message;
+            };
+
+            const clearFieldError = (input) => {
+                const group = input.parentElement;
+                group.classList.remove('error');
+            };
+
+            // Input fields change verification
+            const setupRealTimeValidation = (input, validatorFn, errorMessage) => {
+                input.addEventListener('input', () => {
+                    if (validatorFn(input.value)) {
+                        clearFieldError(input);
+                    } else {
+                        setFieldError(input, errorMessage);
+                    }
+                });
+            };
+
+            // Domain expertise selector change
+            expertiseInput.addEventListener('change', () => {
+                if (expertiseInput.value !== "") {
+                    clearFieldError(expertiseInput);
+                }
+            });
+
+            // Validators
+            const isEmailValid = (email) => {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email.trim());
+            };
+
+            const isPhoneValid = (phone) => {
+                // Minimum 8 characters, matches basic phone formats with optional spacing or + indicators
+                const phoneRegex = /^\+?[0-9\s\-()]{8,20}$/;
+                return phoneRegex.test(phone.trim());
+            };
+
+            const isUrlValid = (url) => {
+                if (url.trim() === "") return true; // Optional field
+                try {
+                    const parsedUrl = new URL(url);
+                    return parsedUrl.protocol === "http:" || parsedUrl.protocol === "https:";
+                } catch (_) {
+                    return false;
+                }
+            };
+
+            // Setup listeners for input modifications
+            setupRealTimeValidation(fullnameInput, (val) => val.trim().length >= 3, "Le nom complet doit comporter au moins 3 caractères.");
+            setupRealTimeValidation(emailInput, isEmailValid, "Veuillez entrer une adresse e-mail professionnelle valide (ex: contact@entreprise.com).");
+            setupRealTimeValidation(phoneInput, isPhoneValid, "Veuillez entrer un numéro de téléphone valide (indicatif pays conseillé).");
+            setupRealTimeValidation(portfolioInput, isUrlValid, "Veuillez saisir un lien URL valide (ex: https://...).");
+
+            // Submit listener
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                let isFormValid = true;
+
+                // Validate Full Name
+                if (fullnameInput.value.trim().length < 3) {
+                    setFieldError(fullnameInput, "Le nom complet est obligatoire (min. 3 lettres).");
+                    isFormValid = false;
+                } else {
+                    clearFieldError(fullnameInput);
+                }
+
+                // Validate Email
+                if (!isEmailValid(emailInput.value)) {
+                    setFieldError(emailInput, "Une adresse e-mail professionnelle valide est requise.");
+                    isFormValid = false;
+                } else {
+                    clearFieldError(emailInput);
+                }
+
+                // Validate Phone
+                if (!isPhoneValid(phoneInput.value)) {
+                    setFieldError(phoneInput, "Le numéro de téléphone avec préfixe pays est requis.");
+                    isFormValid = false;
+                } else {
+                    clearFieldError(phoneInput);
+                }
+
+                // Validate Expertise
+                if (expertiseInput.value === "") {
+                    setFieldError(expertiseInput, "Le choix de votre domaine d'expertise majeur est obligatoire.");
+                    isFormValid = false;
+                } else {
+                    clearFieldError(expertiseInput);
+                }
+
+                // Validate Portfolio (Optional but must be valid URL if filled)
+                if (portfolioInput.value.trim() !== "" && !isUrlValid(portfolioInput.value)) {
+                    setFieldError(portfolioInput, "Veuillez saisir une URL complète et valide.");
+                    isFormValid = false;
+                } else {
+                    clearFieldError(portfolioInput);
+                }
+
+                // Submitting form mock success
+                if (isFormValid) {
+                    // Turn submit button state into loading
+                    const submitBtn = document.getElementById('submit-btn');
+                    const initialBtnText = submitBtn.textContent;
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = "Transmission en cours...";
+
+                    // Simulate API network request delay
+                    setTimeout(() => {
+                        // Display success modal
+                        successOverlay.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+
+                        // Reset loading state and clear form fields
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = initialBtnText;
+                        form.reset();
+                    }, 1500);
+                }
+            });
+
+            // Close success overlay
+            const closeSuccessModal = () => {
+                successOverlay.classList.remove('active');
+                document.body.style.overflow = ''; // Restore page scrolling
+            };
+
+            successCloseBtn.addEventListener('click', closeSuccessModal);
+
+            // Vision Tab Interaction
+            const visionTabs = document.querySelectorAll('.vision-tab-btn');
+            const visionContents = document.querySelectorAll('.vision-tab-content');
+            visionTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Deactivate all tabs
+                    visionTabs.forEach(t => t.classList.remove('active'));
+                    // Activate clicked tab
+                    tab.classList.add('active');
+                    // Show corresponding content panel
+                    const targetId = tab.getAttribute('aria-controls');
+                    visionContents.forEach(content => {
+                        if (content.id === targetId) {
+                            content.classList.add('active');
+                        } else {
+                            content.classList.remove('active');
+                        }
+                    });
+                });
+            });
+            
+            // Close modal when clicking outside card area
+            successOverlay.addEventListener('click', (e) => {
+                if (e.target === successOverlay) {
+                    closeSuccessModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
